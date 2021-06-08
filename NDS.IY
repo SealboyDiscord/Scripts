@@ -1,3 +1,16 @@
+--Bind "fixtools" to the OnSpawn and OnExecute event
+--Bind "noparticles" to the OnExecute event
+--Bind "antikill" to the OnExecute event
+--Bind "nofalldamage" to the OnExecute event
+
+
+
+
+
+
+
+
+
 local Plugin = {
 	["PluginName"] = "NDS_Commands",
 	["PluginDescription"] = "Some useful stuff for Natural Disaster Survival",
