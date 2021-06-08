@@ -1,0 +1,80 @@
+local Plugin = {
+	["PluginName"] = "NDS_Commands",
+	["PluginDescription"] = "Some useful stuff for Natural Disaster Survival",
+	["Commands"] = {
+		["AntiKill"] = {
+			["ListName"] = "antikill / ak",
+			["Description"] = "Auto unequip tools",
+			["Aliases"] = {'ak'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/AntiKill"))();                
+			end       
+		},
+		["FixTools"] = {
+			["ListName"] = "fixtools / ft",
+			["Description"] = "Fix your tools. Bind it to OnSpawn event",
+			["Aliases"] = {'ft'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/ToolFix"))();                
+			end   
+                },
+		["NoParticles"] = {
+			["ListName"] = "noparticles / np",
+			["Description"] = "Remove Sandstorm/Blizzard Particles. Run it before the disaster starts",
+			["Aliases"] = {'np'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/RemoveGUI's"))();                
+			end   
+                },
+		["WaterWalk"] = {
+			["ListName"] = "waterwalk / ww",
+			["Description"] = "Walk on water",
+			["Aliases"] = {'ww'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/WaterWalk"))();                
+			end   
+                },
+		["NoFallDamage"] = {
+			["ListName"] = "nofalldamage / nfd",
+			["Description"] = "Removes Fall Damage",
+			["Aliases"] = {'nfd'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/NoFallDamage_NDS"))();                
+			end   
+                },
+		["LoopInvisParts"] = {
+			["ListName"] = "loopinvisparts / lip",
+			["Description"] = "See invisflinger",
+			["Aliases"] = {'lip'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/InvisParts"))();                
+			end   
+                },
+		["ViewWins"] = {
+			["ListName"] = "viewwins / vw",
+			["Description"] = "Move cam to leaderboard",
+			["Aliases"] = {'vw'},
+			["Function"] = function(args,speaker)
+				local cam = game.Workspace.Camera
+
+                                workspace.CurrentCamera.CameraType = "Scriptable"
+                                cam.CFrame = CFrame.new(-300.169464, 204.155823, 376.832336, -0.852640152, -0.0419486612, 0.520811975, 3.7252903e-09, 0.996772051, 0.0802847296, -0.522498667, 0.0684539825, -0.849887788)
+                                cam.Focus = Focus.new(-308.337524, 202.896698, 390.161407, 1, 0, 0, 0, 1, 0, 0, 0, 1)                
+			end   
+                },
+		["UnViewWins"] = {
+			["ListName"] = "unviewwins / unvw",
+			["Description"] = "Move cam back to you",
+			["Aliases"] = {'unvw'},
+			["Function"] = function(args,speaker)
+				local player = game.Players.LocalPlayer
+
+                                workspace.CurrentCamera.CameraSubject = player.Character:FindFirstChildWhichIsA('Humanoid')
+                                workspace.CurrentCamera.CameraType = "Custom"
+                                player.CameraMode = "Classic"
+			end   
+		}
+	}
+}
+
+return Plugin
