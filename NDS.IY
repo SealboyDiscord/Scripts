@@ -1,3 +1,5 @@
+--Use event binds if you are smart
+
 local Plugin = {
 	["PluginName"] = "NDS_Commands",
 	["PluginDescription"] = "Some useful stuff for Natural Disaster Survival",
