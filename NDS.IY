@@ -1,0 +1,56 @@
+local Plugin = {
+	["PluginName"] = "NDS_Commands",
+	["PluginDescription"] = "Some useful stuff for Natural Disaster Survival",
+	["Commands"] = {
+		["AntiKill"] = {
+			["ListName"] = "antikill / ak",
+			["Description"] = "Auto unequip tools",
+			["Aliases"] = {'ak'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/AntiKill"))();                
+			end       
+		},
+		["FixTools"] = {
+			["ListName"] = "fixtools / ft",
+			["Description"] = "Fix your tools. Bind it to OnSpawn event",
+			["Aliases"] = {'ft'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/ToolFix"))();                
+			end   
+                },
+		["NoParticles"] = {
+			["ListName"] = "noparticles / np",
+			["Description"] = "Remove Sandstorm/Blizzard Particles. Run it before the disaster starts",
+			["Aliases"] = {'np'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/RemoveGUI's"))();                
+			end   
+                },
+		["WaterWalk"] = {
+			["ListName"] = "waterwalk / ww",
+			["Description"] = "Walk on water",
+			["Aliases"] = {'ww'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/WaterWalk"))();                
+			end   
+                },
+		["NoFallDamage"] = {
+			["ListName"] = "nofalldamage / nfd",
+			["Description"] = "Removes Fall Damage",
+			["Aliases"] = {'nfd'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/NoFallDamage_NDS"))();                
+			end   
+                },
+		["LoopInvisParts"] = {
+			["ListName"] = "loopinvisparts / lip",
+			["Description"] = "See invisflinger",
+			["Aliases"] = {'lip'},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DiIemmaDoggo/Scripts/main/InvisParts"))();                
+			end   
+		}
+	}
+}
+
+return Plugin
