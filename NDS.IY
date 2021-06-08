@@ -1,4 +1,5 @@
 --Use event binds if you are smart
+--Fuck you DeathbyHate. Suck ducks
 
 local Plugin = {
 	["PluginName"] = "NDS_Commands",
